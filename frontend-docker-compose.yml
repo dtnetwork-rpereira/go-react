@@ -1,0 +1,15 @@
+services:
+  web:
+    image: node:slim
+    volumes:
+      - ./frontend:/home/frontend
+    ports:
+      - "8080:8080"
+    working_dir: /home/frontend
+    command: >
+      npm install
+      && npm run dev
+
+networks:
+  go-react-backend:
+    driver: overlay
