@@ -1,7 +1,7 @@
 package main
 
-import "go-react/cmd"
+import "go-react/cmd/web"
 
 func main() {
-	cmd.StartServer()
+	web.Start()
 }
