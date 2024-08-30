@@ -8,6 +8,7 @@ import (
 
 func StartRouter(r *mux.Router) {
 	r.HandleFunc("/", HomeLander)
+	PrepareAdminRoutes(r)
 }
 
 func HomeLander(w http.ResponseWriter, r *http.Request) {
